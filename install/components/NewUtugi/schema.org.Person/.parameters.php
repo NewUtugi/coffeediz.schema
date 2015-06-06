@@ -100,7 +100,7 @@ $arComponentParameters = array(
 );
 
 //START IMAGE DETAIL
-if (!empty($arParams['IMAGEURL']))
+if (!empty($arCurrentValues['IMAGEURL']))
 {
     $arComponentParameters["PARAMETERS"]["IMAGE_NAME"] = Array(
         "PARENT" => "IMAGE_PARAMS",
@@ -137,8 +137,8 @@ if (!empty($arParams['IMAGEURL']))
 }
 //END IMAGE DETAIL
 
-//START IMAGE DETAIL
-if (!empty($arParams['WORKSFORNAME']))
+//START WORKS_FOR
+if (!empty($arCurrentValues['WORKSFORNAME']))
 {
     $arComponentParameters["PARAMETERS"]["WORKSFOR_DESCRIPTION"] = Array(
         "PARENT" => "WORKSFOR_PARAMS",
@@ -152,5 +152,37 @@ if (!empty($arParams['WORKSFORNAME']))
         "NAME" => GetMessage("WORKSFOR_SITE"),
         "TYPE" => "STRING",
     );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_PHONE"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_PHONE"),
+        "TYPE" => "STRING",
+        "MULTIPLE" =>"Y",
+    );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_POST_CODE"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_POST_CODE"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_COUNTRY"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_COUNTRY"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_REGION"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_REGION"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_LOCALITY"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_LOCALITY"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["WORKSFOR_ADDRESS"] = Array(
+        "PARENT" => "WORKSFOR_PARAMS",
+        "NAME" => GetMessage("WORKSFOR_ADDRESS"),
+        "TYPE" => "STRING",
+    );
 }
-//END IMAGE DETAIL
+//END WORKS_FOR
+
